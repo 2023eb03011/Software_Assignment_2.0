@@ -1,0 +1,94 @@
+Git Commands Documentation
+
+mkdir Software-Assignment
+Creates a new project folder for the assignment.
+
+cd Software-Assignment
+Navigates into the project directory.
+
+echo "<h1>Main Page</h1>" > index.html
+Creates the index.html file with initial content.
+
+echo "<h1>About Page</h1>" > about.html
+Creates the about.html file with initial content.
+
+echo "<h1>Help Page</h1>" > help.html
+Creates an additional help.html file as shown in the assignment.
+
+git init
+Initializes a new Git repository in the project folder.
+
+git status
+Displays the current state of the repository and shows untracked files.
+
+git add index.html about.html help.html
+Stages all HTML files for commit.
+
+git commit -m "Initial Commit added HTML Pages"
+Creates the first commit containing all HTML files.
+
+echo "<p>Welcome to the Main Page</p>" >> index.html
+Appends new content to index.html.
+
+git add index.html
+Stages the modified index.html file.
+
+git commit -m "Updated Index Page"
+Creates a second commit after modifying index.html.
+
+git branch feature
+Creates a new branch named "feature".
+
+git checkout feature
+Switches to the feature branch.
+
+echo "<p>Feature Update in About Page</p>" >> about.html
+Adds new content to about.html in the feature branch.
+
+git add about.html
+Stages the updated about.html file.
+
+git commit -m "Feature update in branch"
+Commits the changes made in the feature branch.
+
+git checkout master
+Switches back to the main branch (called master in this setup).
+
+git merge feature
+Merges the feature branch into the master branch.
+
+git log --oneline --graph --all
+Displays a compact commit history including branch and merge activity.
+
+echo "*.log" > .gitignore
+Creates a .gitignore file to ignore all .log files.
+
+echo "temp/" >> .gitignore
+Adds a folder (temp/) to be ignored by Git.
+
+git add .gitignore
+Stages the .gitignore file.
+
+git commit -m "Add gitignore file"
+Commits the .gitignore file to the repository.
+
+echo "<p>Random Change</p>" >> index.html
+Adds a temporary change to index.html for undo demonstration.
+
+git add index.html
+Stages the temporary change.
+
+git commit -m "Temp Change"
+Creates an additional commit to demonstrate undo functionality.
+
+git revert HEAD --no-edit
+Reverts the last commit by creating a new commit that undoes it automatically.
+
+git status
+Shows the repository state after the revert operation.
+
+git remote add origin https://github.com/2023eb03011/Software_Assignment_2.0.git
+Connects the local repository to the remote GitHub repository.
+
+git push -u origin master
+Pushes the local repository to GitHub and sets upstream tracking.
